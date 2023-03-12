@@ -1,8 +1,9 @@
-import Links from '../src/components/Links'
-import Layout from '../src/components/Layout'
-import SubLayout from '../src/components/SubLayout'
+import Layout from '../components/Layout'
+import SubLayout from '../components/SubLayout'
 
 export async function getStaticProps() {
+  console.log('server')
+
   return {
     props: { time: new Date().toISOString() },
   }
@@ -11,8 +12,7 @@ export async function getStaticProps() {
 export default function SSG({ time }) {
   return (
     <>
-      <h1 className="title">SSG : {time}</h1>
-      <Links />
+      <h1 className="title">{time}</h1>
     </>
   )
 }
