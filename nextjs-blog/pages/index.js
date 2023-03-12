@@ -1,20 +1,17 @@
 import Head from 'next/head'
-import Link from "next/link";
-import Links from "../components/Links";
-
+import Link from 'next/link'
+import Links from '../src/components/Links'
 
 export async function getServerSideProps() {
   return {
-    props: { time: new Date().toISOString()}
+    props: { time: new Date().toISOString() },
   }
 }
-export default function Home({time}) {
+export default function Home({ time }) {
   return (
     <>
-        <h1 className="title">
-            {time}
-        </h1>
-        <Links />
+      <h1 className="title">{time}</h1>
+      <Links />
     </>
   )
 }

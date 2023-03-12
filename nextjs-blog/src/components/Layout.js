@@ -1,20 +1,18 @@
-import React from 'react';
-import Head from "next/head";
-import Links from "./Links";
+import React from 'react'
+import Head from 'next/head'
+import Links from './Links'
 
 const Layout = ({ children }) => {
-    return (
-        <div className="container">
-            <Head>
-                <title>Create Next App</title>
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
+  return (
+    <div className="container">
+      <Head>
+        <title>Create Next App</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-            <main>
-                {children}
-            </main>
+      <main>{children}</main>
 
-            <style jsx>{`
+      <style jsx>{`
         .container {
           min-height: 100vh;
           padding: 0 0.5rem;
@@ -145,7 +143,7 @@ const Layout = ({ children }) => {
         }
       `}</style>
 
-            <style jsx global>{`
+      <style jsx global>{`
         html,
         body {
           padding: 0;
@@ -159,8 +157,8 @@ const Layout = ({ children }) => {
           box-sizing: border-box;
         }
       `}</style>
-        </div>
-    );
-};
+    </div>
+  )
+}
 
-export default Layout;
+export default Layout
